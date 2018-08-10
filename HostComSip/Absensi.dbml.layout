@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Absensi">
+  <DataContextMoniker Name="/AbsensiDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bee27917-9c5a-4e83-bf8e-610e6c473898" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/AbsensiDataContext/sekolah" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b879a6a3-764b-4d62-b0a9-3bc4daa51502" absoluteBounds="0.76499999999999968, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="128900ea-d6f6-41a9-9357-cf08170f971a" absoluteBounds="3.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/AbsensiDataContext/absen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba8cf21c-a0bd-4f92-8d70-1ad6eb1f8d5b" absoluteBounds="3.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

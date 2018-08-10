@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="sip" Class="AbsensiDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=USER;Initial Catalog=sip;Integrated Security=True" SettingsObjectName="SIP.Properties.Settings" SettingsPropertyName="sipConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="mesin_absen_log" Member="mesin_absen_logs">
+    <Type Name="mesin_absen_log">
+      <Column Name="log_mesin_absen_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="log_mesin_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="log_mesin_tgl" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="mesin_absensi" Member="mesin_absensis">
+    <Type Name="mesin_absensi">
+      <Column Name="mesinabsen_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mesinabsen_nomor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mesinabsen_ip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mesinabsen_token" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mesinabsen_keterangan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mesinabsen_sekolah_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="sekolah" Member="sekolahs">
+    <Type Name="sekolah">
+      <Column Name="sekolah_id" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nama_sekolah" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="alamat" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="guru" Member="gurus">
+    <Type Name="guru">
+      <Column Name="guru_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="guru_sekolah_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="guru_nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="guru_nip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="guru_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="guru_nomor_kartu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="guru_phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="guru_jk" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="guru_status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="absen" Member="absens">
+    <Type Name="absen">
+      <Column Name="absen_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="absen_sekolah_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_nomor_kartu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_kal_akademik_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_tanggal" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="absen_masuk" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="absen_keluar" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="absen_device" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InsertAt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="siswa" Member="siswas">
+    <Type Name="siswa">
+      <Column Name="siswa_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="siswa_sekolah_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_kelas_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_nisn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_jk" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_tempat_lahir" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_tanggal_lahir" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_alamat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_hp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nama_panggilan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_waktu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_jarak" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_anak_ke" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_jumlah_sudara" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_kode_pos" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_no_telp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_no_ijazah" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_nik" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_no_kk" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_nomor_kartu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_tanggal_langganan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_kelurahan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_kecamatan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_kabupaten" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_provinsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="siswa_agama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

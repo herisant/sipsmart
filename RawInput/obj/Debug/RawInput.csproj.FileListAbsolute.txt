@@ -1,0 +1,10 @@
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\RawInput\bin\Debug\RawInput.dll
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\RawInput\bin\Debug\RawInput.pdb
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\RawInput\obj\Debug\RawInput.dll
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\RawInput\obj\Debug\RawInput.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\RawInput\bin\Debug\RawInput.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\RawInput\bin\Debug\RawInput.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\RawInput\obj\Debug\RawInput.csproj.CoreCompileInputs.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\RawInput\obj\Debug\RawInput.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\RawInput\obj\Debug\RawInput.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\RawInput\obj\Debug\RawInput.csprojAssemblyReference.cache

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.375" name="Absensi">
+  <DataContextMoniker Name="/AbsensiDataContext" />
+  <nestedChildShapes>
+    <classShape Id="31073b55-709f-49e8-b7d5-80725601b088" absoluteBounds="0.75, 0.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/AbsensiDataContext/mesin_absen_log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7138dc1-b81a-496b-8c14-c458c0e5d3d4" absoluteBounds="0.76499999999999968, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4e6cadc-c4a1-4d76-a4a4-2cbd80ed5892" absoluteBounds="3.75, 0.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/AbsensiDataContext/mesin_absensi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea5e0f33-3d3d-433d-99e3-4d7ee1d96c56" absoluteBounds="3.7649999999999997, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae9ebcff-3b79-4028-afe7-3ecc6c2b1043" absoluteBounds="0.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/AbsensiDataContext/sekolah" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0696508-2f85-4f5e-97ae-9208944177fa" absoluteBounds="0.76499999999999968, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ffce1742-bcb2-4d3d-af0e-48b0ca572032" absoluteBounds="3.75, 3.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/AbsensiDataContext/guru" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5b9939e-0bf0-4f16-8d10-e11a0527e979" absoluteBounds="3.7649999999999997, 4.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c54e90f3-ce5f-4d57-b832-fa9a86ea12ff" absoluteBounds="6.75, 0.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/AbsensiDataContext/absen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdcf70e7-1955-4e2e-969a-064d3294a466" absoluteBounds="6.765, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4e0b2cf-1b9a-4a27-9371-e18ed17ecce9" absoluteBounds="6.75, 4.75, 2, 6.3861311848958309">
+      <DataClassMoniker Name="/AbsensiDataContext/siswa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3815acd1-4072-4bea-bb5b-442b1fd8de29" absoluteBounds="6.7650000000000006, 5.21, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,19 @@
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\HostComSip\bin\Debug\HostComSip.exe.config
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\HostComSip\bin\Debug\HostComSip.exe
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\HostComSip\bin\Debug\HostComSip.pdb
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\HostComSip\bin\Debug\Newtonsoft.Json.dll
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\HostComSip\bin\Debug\Newtonsoft.Json.xml
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\HostComSip\obj\Debug\HostComSip.exe
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\HostComSip\obj\Debug\HostComSip.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\bin\Debug\HostComSip.exe.config
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\bin\Debug\HostComSip.exe
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\bin\Debug\HostComSip.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\obj\Debug\HostComSip.csprojAssemblyReference.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\obj\Debug\HostComSip.csproj.CoreCompileInputs.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\obj\Debug\HostComSip.csproj.CopyComplete
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\obj\Debug\HostComSip.exe
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\obj\Debug\HostComSip.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\bin\Debug\MySql.Data.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\bin\Debug\Google.Protobuf.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\HostComSip\bin\Debug\MySql.Data.xml

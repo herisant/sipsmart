@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="sip" Class="AbsensiDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=USER;Initial Catalog=sip;Integrated Security=True" SettingsObjectName="HostComSip.Properties.Settings" SettingsPropertyName="sipConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.sekolah" Member="sekolahs">
+    <Type Name="sekolah">
+      <Column Name="sekolah_id" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nama_sekolah" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="alamat" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.absen" Member="absens">
+    <Type Name="absen">
+      <Column Name="absen_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="absen_sekolah_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_nomor_kartu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_kal_akademik_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="absen_tanggal" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="absen_masuk" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="absen_keluar" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="absen_device" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

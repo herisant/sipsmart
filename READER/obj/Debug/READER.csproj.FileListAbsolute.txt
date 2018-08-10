@@ -1,0 +1,37 @@
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\bin\Debug\READER.exe.config
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\bin\Debug\READER.exe
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\bin\Debug\READER.pdb
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\bin\Debug\RawInput.dll
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\bin\Debug\USBHIDDRIVER.dll
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\bin\Debug\RawInput.pdb
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\bin\Debug\USBHIDDRIVER.pdb
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\bin\Debug\USBHIDDRIVER.xml
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\obj\Debug\READER.csprojResolveAssemblyReference.cache
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\obj\Debug\READER.Form1.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\obj\Debug\READER.Form2.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\obj\Debug\READER.Properties.Resources.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\obj\Debug\READER.csproj.GenerateResource.Cache
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\obj\Debug\READER.exe
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\READER\obj\Debug\READER.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\READER.exe.config
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\READER.exe
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\READER.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\MySql.Data.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\MySql.Web.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\RawInput.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\USBHIDDRIVER.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\Google.Protobuf.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\RawInput.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\USBHIDDRIVER.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\USBHIDDRIVER.xml
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\MySql.Data.xml
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\bin\Debug\MySql.Web.xml
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\obj\Debug\READER.csprojAssemblyReference.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\obj\Debug\READER.Form1.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\obj\Debug\READER.Form2.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\obj\Debug\READER.Properties.Resources.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\obj\Debug\READER.csproj.GenerateResource.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\obj\Debug\READER.csproj.CoreCompileInputs.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\obj\Debug\READER.csproj.CopyComplete
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\obj\Debug\READER.exe
+C:\Users\Mobile\Documents\VS Studio Project\READER\READER\obj\Debug\READER.pdb

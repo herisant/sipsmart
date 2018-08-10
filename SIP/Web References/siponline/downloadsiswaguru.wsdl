@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:downloadSiswaGuru" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:downloadSiswaGuru" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:downloadSiswaGuru">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getDataRequest">
+    <wsdl:part name="sekolah_id" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getDataResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="downloadSiswaGuruPortType">
+    <wsdl:operation name="getData">
+      <documentation>Get data siswa dan guru</documentation>
+      <wsdl:input message="tns:getDataRequest" />
+      <wsdl:output message="tns:getDataResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="downloadSiswaGuruBinding" type="tns:downloadSiswaGuruPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getData">
+      <soap:operation soapAction="urn:downloadSiswaGuru#getData" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:downloadSiswaGuru" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:downloadSiswaGuru" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="downloadSiswaGuru">
+    <wsdl:port name="downloadSiswaGuruPort" binding="tns:downloadSiswaGuruBinding">
+      <soap:address location="http://www.siponline.id/apps/main/index.php/Service/downloadsiswaguru" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

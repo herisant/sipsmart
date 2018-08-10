@@ -1,0 +1,38 @@
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\bin\Debug\SIP.exe.config
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\bin\Debug\SIP.exe
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\bin\Debug\SIP.pdb
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.csprojResolveAssemblyReference.cache
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.FormCreate.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.FormDevice.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.FormDownload.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.FormLoading.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.FormSekolah.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.FormSettings.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.FormSIP.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.FormUpload.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.FormWebService.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.Properties.Resources.resources
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.csproj.GenerateResource.Cache
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.exe
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\SIP\obj\Debug\SIP.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\bin\Debug\SIP.exe.config
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\bin\Debug\SIP.exe
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\bin\Debug\SIP.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.csprojAssemblyReference.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.csproj.ResolveComReference.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormCreate.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormDevice.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormDownload.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormLoading.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormSetAbsen.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormSekolah.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormSettings.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormSIP.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormUpload.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.FormWebService.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.Properties.Resources.resources
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.csproj.GenerateResource.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.csproj.CoreCompileInputs.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.exe
+C:\Users\Mobile\Documents\VS Studio Project\READER\SIP\obj\Debug\SIP.pdb

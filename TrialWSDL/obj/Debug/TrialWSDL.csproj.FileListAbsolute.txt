@@ -1,0 +1,13 @@
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\TrialWSDL\bin\Debug\TrialWSDL.exe.config
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\TrialWSDL\obj\Debug\TrialWSDL.csprojResolveAssemblyReference.cache
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\TrialWSDL\bin\Debug\TrialWSDL.exe
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\TrialWSDL\bin\Debug\TrialWSDL.pdb
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\TrialWSDL\obj\Debug\TrialWSDL.exe
+D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\TrialWSDL\obj\Debug\TrialWSDL.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\bin\Debug\TrialWSDL.exe.config
+C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\bin\Debug\TrialWSDL.exe
+C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\bin\Debug\TrialWSDL.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\obj\Debug\TrialWSDL.csprojAssemblyReference.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\obj\Debug\TrialWSDL.csproj.CoreCompileInputs.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\obj\Debug\TrialWSDL.exe
+C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\obj\Debug\TrialWSDL.pdb
