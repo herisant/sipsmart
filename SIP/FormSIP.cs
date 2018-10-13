@@ -341,8 +341,8 @@ namespace SIP
             int i = 1;
             MySqlCommand dbcmd_select    = conn.CreateCommand();
 
-            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
-            string sqldata = "FROM absen INNER JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu WHERE absen.absen_nomor_kartu='" + keyData+"'; ";
+            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu";
+            string sqldata = "FROM siswa where siswa_nomor_kartu='" + keyData+"'; ";
             dbcmd_select.CommandText = sqlselect + " " + sqldata;
 
             conn.Open();
@@ -367,10 +367,8 @@ namespace SIP
                 while (true)
                 {
                     //some other processing to do possible
-                    if (stopwatch1.ElapsedMilliseconds >= 500)
+                    if (stopwatch1.ElapsedMilliseconds >= 1000)
                     {
-
-
                         gbr1.Image = Properties.Resources.NO;
                         ClockIn1.Text = "Clock In";
                         Name1.Text = "Name";
@@ -394,8 +392,8 @@ namespace SIP
             int i = 1;
             MySqlCommand dbcmd_select = conn.CreateCommand();
 
-            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
-            string sqldata = "FROM absen INNER JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu WHERE absen.absen_nomor_kartu='" + keyData + "'; ";
+            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu";
+            string sqldata = "FROM siswa where siswa_nomor_kartu='" + keyData + "'; ";
             dbcmd_select.CommandText = sqlselect + " " + sqldata;
 
             conn.Open();
@@ -444,8 +442,8 @@ namespace SIP
             int i = 1;
             MySqlCommand dbcmd_select = conn.CreateCommand();
 
-            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
-            string sqldata = "FROM absen INNER JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu WHERE absen.absen_nomor_kartu='" + keyData + "'; ";
+            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu";
+            string sqldata = "FROM siswa where siswa_nomor_kartu='" + keyData + "'; ";
             dbcmd_select.CommandText = sqlselect + " " + sqldata;
 
             conn.Open();
@@ -484,8 +482,8 @@ namespace SIP
             int i = 1;
             MySqlCommand dbcmd_select = conn.CreateCommand();
 
-            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
-            string sqldata = "FROM absen INNER JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu WHERE absen.absen_nomor_kartu='" + keyData + "'; ";
+            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu";
+            string sqldata = "FROM siswa where siswa_nomor_kartu='" + keyData + "'; ";
             dbcmd_select.CommandText = sqlselect + " " + sqldata;
 
             conn.Open();
@@ -524,8 +522,8 @@ namespace SIP
             int i = 1;
             MySqlCommand dbcmd_select = conn.CreateCommand();
 
-            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
-            string sqldata = "FROM absen INNER JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu WHERE absen.absen_nomor_kartu='" + keyData + "'; ";
+            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu";
+            string sqldata = "FROM siswa where siswa_nomor_kartu='" + keyData + "'; ";
             dbcmd_select.CommandText = sqlselect + " " + sqldata;
 
             conn.Open();
@@ -564,8 +562,8 @@ namespace SIP
             int i = 1;
             MySqlCommand dbcmd_select = conn.CreateCommand();
 
-            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
-            string sqldata = "FROM absen INNER JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu WHERE absen.absen_nomor_kartu='" + keyData + "'; ";
+            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu";
+            string sqldata = "FROM siswa where siswa_nomor_kartu='" + keyData + "'; ";
             dbcmd_select.CommandText = sqlselect + " " + sqldata;
 
             conn.Open();
@@ -686,29 +684,7 @@ namespace SIP
                         conn.Close();
                         if (count == 0)
                         {
-                            //MessageBox.Show("insert");
-                            /*string url = "http://localhost/SIP/test-absen.php?NOMESIN=" + noMesin + "&NOKARTU=" + keyData + "&WAKTU=" + insertat + " ";
-                            
-                            try
-                            {
-                                HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(url);
-                                myRequest.Method = "GET";
-                                WebResponse myResponse = myRequest.GetResponse();
-                                StreamReader sr = new StreamReader(myResponse.GetResponseStream(), System.Text.Encoding.UTF8);
-                                string result = sr.ReadToEnd();
-                                //Console.WriteLine(result);
-                                result = result.Replace('\n', ' ');
-                                sr.Close();
-                                myResponse.Close();
-
-                                MessageBox.Show(result);
-
-
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                            }*/
+                    
                             conn.Open();
                             dbcmd_count.CommandText = ceksiswa;
                             Int32 countsiswa = Convert.ToInt32(dbcmd_count.ExecuteScalar()); //proses menghitung jumlah data(count)
@@ -723,8 +699,8 @@ namespace SIP
                             }
                             else
                             {
-                                string sqlinsert = "insert into absen(absen_id, absen_nomor_kartu, absen_sekolah_id, absen_status, absen_device, absen_tanggal, InsertAt, absen_masuk ) " +
-                                "values('" + absenid + "','" + absenkartuid + "','" + absensekolahid + "','" + "PENDING" + "','" + noMesin + "','" + tanggalabsen + "','" + insertat + "','" + jammasuk + "');";
+                                string sqlinsert = "insert into absen(absen_nomor_kartu, absen_sekolah_id, absen_status, absen_device, absen_tanggal, InsertAt, absen_masuk ) " +
+                                "values('" + absenkartuid + "','" + absensekolahid + "','" + "PENDING" + "','" + noMesin + "','" + tanggalabsen + "','" + insertat + "','" + jammasuk + "');";
                                 dbcmd_insert.CommandText = sqlinsert;
 
                                 try
@@ -767,29 +743,7 @@ namespace SIP
                             }
                             else
                             {
-                                /* MySqlDataReader readers = null;
-
-                                 int ii = 1;
-                                 MySqlCommand dbcmd_countupdate = conn.CreateCommand();
-                                 MySqlCommand dbcmd_selectupdate = conn.CreateCommand();
-
-                                 string sqlcountupdate = "SELECT COUNT(*) FROM absen where absen_nomor_kartu='" + keyData + "' and absen_tanggal='" + tanggalabsen + "';";
-                                 dbcmd_countupdate.CommandText = sqlcountupdate;
-
-                                 //string sqlselectupdate = "select * from absen where absen_nomor_kartu = '" + absenkartuid + "' and absen_tanggal = '" + tanggalabsen + "';";
-                                 //dbcmd_selectupdate.CommandText = sqlselectupdate;
-
-                                 //conn.Open();
-                                 //Int32 countupdates = Convert.ToInt32(dbcmd_countupdate.ExecuteScalar()); //proses menghitung jumlah data(count)
-                                 //conn.Close();
-
-                                // conn.Open();
-                                 //readers = dbcmd_selectupdate.ExecuteReader();
-                                 //conn.Close();
-
-                                 if (0 > 0)
-                                 {
-                                 */
+                               
                                 MySqlCommand dbcmd_update = conn.CreateCommand();
                                 //MessageBox.Show("man");
                                     string sqlup = "update absen SET absen_keluar = '" + jammasuk + "', upload_keluar ='0' where absen_nomor_kartu ='" + absenkartuid + "' and absen_tanggal = '" + tanggalabsen + "';";
@@ -828,6 +782,8 @@ namespace SIP
             }
 
             conn.Close();
+
+            timerUpdate();
         }
         protected bool isActiveCard(string keyData)
         {
@@ -859,7 +815,7 @@ namespace SIP
             string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";SslMode=" + ssl + ";";
             MySqlConnection conn = new MySqlConnection(connStr);
 
-            int i = 1;
+            /*int i = 1;*/
             MySqlCommand dbcmd_count = conn.CreateCommand();
             MySqlCommand dbcmd_select = conn.CreateCommand();
 
@@ -889,7 +845,8 @@ namespace SIP
             {
                 id = "0";
             }
-
+            reader.Close();
+            conn.Close();
             return id;
         }
         private void FormSIP_Load(object sender, EventArgs e)
@@ -898,7 +855,8 @@ namespace SIP
             {
                 if (validasi == true)
                 {
-                    timerRefresh.Enabled = true;
+                    //timerRefresh.Enabled = true;
+                    timerUpdate();
                 }
                 LoggerUSB();
             }
@@ -936,6 +894,12 @@ namespace SIP
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void tsInstall_Click(object sender, EventArgs e)
         {
             string SQL = string.Empty;
@@ -1109,7 +1073,39 @@ namespace SIP
             conn.Close();
         }
 
+        private void timerUpdate()
+        {
+            DateTime dateValuessa = DateTime.Now;
+            string tanggalabs = dateValuessa.ToString("yyyy-MM-dd");
 
-        
+            // string persis = True;
+            string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";SslMode=" + ssl + ";";
+            MySqlConnection conn = new MySqlConnection(connStr);
+
+            int i = 1;
+            MySqlCommand dbcmd = conn.CreateCommand();
+            string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
+            string sqldata = "FROM absen LEFT JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu where absen_tanggal='" + tanggalabs + "' ;";
+            dbcmd.CommandText = sqlselect + " " + sqldata;
+
+            var dt = new DataTable("absen");
+            conn.Open();
+            var r = dbcmd.ExecuteReader();
+
+            dt.Load(r);
+
+            dgv.Rows.Clear();
+            dgv.Refresh();
+
+            foreach (DataRow baris in dt.Rows)
+            {
+                dgv.Rows.Add(i, baris["siswa_nama"], baris["absen_masuk"], baris["absen_keluar"]);
+                i++;
+            }
+            conn.Close();
+        }
+
+
+
     }
 }

@@ -4,3 +4,17 @@ D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\USB\bin\Debug\USBHIDDRIVER.pdb
 D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\USB\obj\Debug\USBHIDDRIVER.csprojResolveAssemblyReference.cache
 D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\USB\obj\Debug\USBHIDDRIVER.dll
 D:\PEKERJAAN\SOFTWARE HOUSE\PROJECTS\USB\READER\USB\obj\Debug\USBHIDDRIVER.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\USB\bin\Debug\USBHIDDRIVER.XML
+C:\Users\Mobile\Documents\VS Studio Project\READER\USB\bin\Debug\USBHIDDRIVER.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\USB\bin\Debug\USBHIDDRIVER.pdb
+C:\Users\Mobile\Documents\VS Studio Project\READER\USB\obj\Debug\USBHIDDRIVER.csprojAssemblyReference.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\USB\obj\Debug\USBHIDDRIVER.csproj.CoreCompileInputs.cache
+C:\Users\Mobile\Documents\VS Studio Project\READER\USB\obj\Debug\USBHIDDRIVER.dll
+C:\Users\Mobile\Documents\VS Studio Project\READER\USB\obj\Debug\USBHIDDRIVER.pdb
+C:\Users\damar\Documents\Visual Studio 2017\READER\USB\bin\Debug\USBHIDDRIVER.XML
+C:\Users\damar\Documents\Visual Studio 2017\READER\USB\bin\Debug\USBHIDDRIVER.dll
+C:\Users\damar\Documents\Visual Studio 2017\READER\USB\bin\Debug\USBHIDDRIVER.pdb
+C:\Users\damar\Documents\Visual Studio 2017\READER\USB\obj\Debug\USBHIDDRIVER.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Visual Studio 2017\READER\USB\obj\Debug\USBHIDDRIVER.dll
+C:\Users\damar\Documents\Visual Studio 2017\READER\USB\obj\Debug\USBHIDDRIVER.pdb
+C:\Users\damar\Documents\Visual Studio 2017\READER\USB\obj\Debug\USBHIDDRIVER.csprojAssemblyReference.cache

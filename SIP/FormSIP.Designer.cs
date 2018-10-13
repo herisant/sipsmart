@@ -99,16 +99,16 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLOCKIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLOCKOUT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.timerRefresh = new System.Windows.Forms.Timer(this.components);
-            this.NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLOCKIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLOCKOUT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.header.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -170,7 +170,7 @@
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(23, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(54, 33);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
@@ -196,6 +196,7 @@
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(20, 30);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.ToolTipText = "Menu SIP";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // tsDevice
             // 
@@ -877,6 +878,36 @@
             this.dgv.Size = new System.Drawing.Size(410, 451);
             this.dgv.TabIndex = 1;
             // 
+            // NO
+            // 
+            this.NO.DataPropertyName = "no";
+            this.NO.HeaderText = "NO";
+            this.NO.Name = "NO";
+            this.NO.ReadOnly = true;
+            this.NO.Width = 60;
+            // 
+            // NAME
+            // 
+            this.NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NAME.DataPropertyName = "siswa_nama";
+            this.NAME.HeaderText = "NAME";
+            this.NAME.Name = "NAME";
+            this.NAME.ReadOnly = true;
+            // 
+            // CLOCKIN
+            // 
+            this.CLOCKIN.DataPropertyName = "absen_masuk";
+            this.CLOCKIN.HeaderText = "CLOCK IN";
+            this.CLOCKIN.Name = "CLOCKIN";
+            this.CLOCKIN.ReadOnly = true;
+            // 
+            // CLOCKOUT
+            // 
+            this.CLOCKOUT.DataPropertyName = "absen_keluar";
+            this.CLOCKOUT.HeaderText = "CLOCK OUT";
+            this.CLOCKOUT.Name = "CLOCKOUT";
+            this.CLOCKOUT.ReadOnly = true;
+            // 
             // bunifuCustomLabel8
             // 
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -939,36 +970,6 @@
             // 
             this.timerRefresh.Interval = 500;
             this.timerRefresh.Tick += new System.EventHandler(this.timerRefresh_Tick);
-            // 
-            // NO
-            // 
-            this.NO.DataPropertyName = "no";
-            this.NO.HeaderText = "NO";
-            this.NO.Name = "NO";
-            this.NO.ReadOnly = true;
-            this.NO.Width = 60;
-            // 
-            // NAME
-            // 
-            this.NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NAME.DataPropertyName = "siswa_nama";
-            this.NAME.HeaderText = "NAME";
-            this.NAME.Name = "NAME";
-            this.NAME.ReadOnly = true;
-            // 
-            // CLOCKIN
-            // 
-            this.CLOCKIN.DataPropertyName = "absen_masuk";
-            this.CLOCKIN.HeaderText = "CLOCK IN";
-            this.CLOCKIN.Name = "CLOCKIN";
-            this.CLOCKIN.ReadOnly = true;
-            // 
-            // CLOCKOUT
-            // 
-            this.CLOCKOUT.DataPropertyName = "absen_keluar";
-            this.CLOCKOUT.HeaderText = "CLOCK OUT";
-            this.CLOCKOUT.Name = "CLOCKOUT";
-            this.CLOCKOUT.ReadOnly = true;
             // 
             // FormSIP
             // 

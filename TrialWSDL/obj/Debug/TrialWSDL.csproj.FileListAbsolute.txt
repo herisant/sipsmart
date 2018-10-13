@@ -11,3 +11,10 @@ C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\obj\Debug\TrialWSDL
 C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\obj\Debug\TrialWSDL.csproj.CoreCompileInputs.cache
 C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\obj\Debug\TrialWSDL.exe
 C:\Users\Mobile\Documents\VS Studio Project\READER\TrialWSDL\obj\Debug\TrialWSDL.pdb
+C:\Users\damar\Documents\Visual Studio 2017\READER\TrialWSDL\bin\Debug\TrialWSDL.exe.config
+C:\Users\damar\Documents\Visual Studio 2017\READER\TrialWSDL\bin\Debug\TrialWSDL.exe
+C:\Users\damar\Documents\Visual Studio 2017\READER\TrialWSDL\bin\Debug\TrialWSDL.pdb
+C:\Users\damar\Documents\Visual Studio 2017\READER\TrialWSDL\obj\Debug\TrialWSDL.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\READER\TrialWSDL\obj\Debug\TrialWSDL.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Visual Studio 2017\READER\TrialWSDL\obj\Debug\TrialWSDL.exe
+C:\Users\damar\Documents\Visual Studio 2017\READER\TrialWSDL\obj\Debug\TrialWSDL.pdb

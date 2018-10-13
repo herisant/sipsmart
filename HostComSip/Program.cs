@@ -12,12 +12,14 @@ using Newtonsoft.Json;
 using System.Windows.Forms;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace HostComSip
 {
     class Program
     {
-
+        static bool ubsenMasukBool = false;
+        static bool ubsenKeluarBool = false;
 
         static string host = "localhost";
         static string user = "root";
@@ -38,14 +40,20 @@ namespace HostComSip
             {
                 try
                 {
-                    UploadAbsensiMasuk();
-                    UploadAbsensiKeluar();
+                    if (ubsenMasukBool == false)
+                    {
+                        UploadAbsensiMasuk();
+                    }
+                    if (ubsenKeluarBool == false)
+                    {
+                        UploadAbsensiKeluar();
+                    }
 
                     System.Threading.Thread.Sleep(1000);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Void Main " + ex.Message);
                 }
             }
         }
@@ -60,17 +68,19 @@ namespace HostComSip
         }
         static async void UploadAbsensiMasuk()
         {
+            ubsenMasukBool = true;
+
+            string usernameUrl = "pro6";
+            string passwordUrl = "pro6Ci-adminLte";
+
+            string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";SslMode=" + ssl + ";";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            
+            MySqlCommand dbcmd = conn.CreateCommand();
             try
 
             {
-                string usernameUrl = "pro6";
-                string passwordUrl = "pro6Ci-adminLte";
-
-                string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";SslMode=" + ssl + ";";
-                MySqlConnection conn = new MySqlConnection(connStr);
-
                 int i = 1;
-                MySqlCommand dbcmd = conn.CreateCommand();
                 string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_id, absen.absen_tanggal, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
                 string sqldata = "FROM absen LEFT JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu where absen.upload_masuk='0';";
                 dbcmd.CommandText = sqlselect + " " + sqldata;
@@ -81,55 +91,13 @@ namespace HostComSip
 
                 dt.Load(r);
 
-
-                /*AbsensiDataContext dc = new HostComSip.AbsensiDataContext(Koneksi());
-                dc.CommandTimeout = 0;
-
-                var absen = from abs in dc.absens
-                            where abs.absen_status == "PENDING"
-                            select abs;*/
-
-
                 foreach (DataRow baris in dt.Rows)
                 {
-                    //string Tanggal = item.absen_tanggal.Value.ToString("yyyy-MM-dd");
-                    //string waktu = baris["absen_masuk"].Value.Hours + ":" + item.absen_masuk.Value.Minutes + ":" + item.absen_masuk.Value.Seconds;
-          
                     using (HttpClient client = new HttpClient())
                     {
-                        /*
-                            try
-                            {
-
-                            DateTime dateValuess = Convert.ToDateTime(baris["absen_tanggal"]);
-                            string tanggalabsen = dateValuess.ToString("yyyy-MM-dd");
-
-                            string url = "http://localhost/SIP/test-absen.php?NOMESIN=" + id_sekolah() + "&NOKARTU=" + baris["siswa_nomor_kartu"].ToString() + "&WAKTU=" + tanggalabsen + " " + baris["absen_masuk"].ToString() + " ";
-
-                            MessageBox.Show(url);
-                            HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(url);
-                                myRequest.Method = "GET";
-                                WebResponse myResponse = myRequest.GetResponse();
-                                StreamReader sr = new StreamReader(myResponse.GetResponseStream(), System.Text.Encoding.UTF8);
-                                string result = sr.ReadToEnd();
-
-
-
-
-                                sr.Close();
-                                myResponse.Close();
-
-                                MessageBox.Show(result);
-
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }*/
-
-                        client.BaseAddress = new Uri(ReadURL());
+                        client.BaseAddress = new Uri("http://35.190.172.58:11960/api/absen/insert");
                         client.DefaultRequestHeaders.Accept.Clear();
-                        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("multipart/form-data"));
+                        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                         var credentials = Convert.ToBase64String(Encoding.ASCII.GetBytes(
                             string.Format("{0}:{1}", usernameUrl, passwordUrl)));
                         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", credentials);
@@ -143,20 +111,135 @@ namespace HostComSip
                              { "nomorMesin", id_sekolah() },
                              { "nomorKartu", baris["siswa_nomor_kartu"].ToString() },
                              { "waktuPresensi", tanggalabsen+" "+baris["absen_masuk"].ToString() }
+
                         };
 
-                        var content = new FormUrlEncodedContent(values);
-                        var response = await client.PostAsync(ReadURL(), content);
+                        string json = JsonConvert.SerializeObject(values, Formatting.Indented);
+
+                        //Console.WriteLine(json);
+
+                        string postData = JsonConvert.SerializeObject(values.ToString());
+
+                        var content = new StringContent(json, Encoding.UTF8, "application/json");
+                        var response = client.PostAsync("http://35.190.172.58:11960/api/absen/insert", content).Result;
 
                         var responseString = await response.Content.ReadAsStringAsync();
                         Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + " Upload data siswa to server : " + baris["absen_id"].ToString());
                         Console.WriteLine("");
 
+                        //Console.WriteLine(id_sekolah()+"/"+ baris["siswa_nomor_kartu"].ToString()+"/"+ tanggalabsen + " " + baris["absen_masuk"].ToString());
+
+                        //Console.WriteLine(postData);
+
                         Dictionary<string, Object> Items = JsonConvert.DeserializeObject<Dictionary<string, Object>>(responseString);
                         foreach (KeyValuePair<string, Object> itm in Items)
                         {
+                            //Console.WriteLine(tanggalabsen + " " + baris["absen_masuk"].ToString());
                             if (itm.Key == "sukses")
                             {
+                                
+                                if (itm.Value.ToString() == "1")
+                                {
+                                    Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + " Upload data siswa to server : " + baris["absen_id"].ToString() + " sukses");
+                                    Console.WriteLine("Masuk");
+
+                                    Update_status_absen_masuk(baris["absen_id"].ToString());
+                                }
+                                else
+                                {
+                                    Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + " Upload data siswa to server : " + baris["absen_id"].ToString() + " gagal");
+                                    Console.WriteLine("");
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+
+                r.Close();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Absen Masuk " + ex.Message);
+            }
+
+
+            ubsenMasukBool = false;
+
+
+        }
+
+        static async void UploadAbsensiMasukOri()
+        {
+            ubsenMasukBool = true;
+
+            string usernameUrl = "pro6";
+            string passwordUrl = "pro6Ci-adminLte";
+
+            string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";SslMode=" + ssl + ";";
+            MySqlConnection conn = new MySqlConnection(connStr);
+
+            MySqlCommand dbcmd = conn.CreateCommand();
+            try
+
+            {
+
+                int i = 1;
+                string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_id, absen.absen_tanggal, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
+                string sqldata = "FROM absen LEFT JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu where absen.upload_masuk='0';";
+                dbcmd.CommandText = sqlselect + " " + sqldata;
+
+                var dt = new DataTable("absen");
+                conn.Open();
+                var r = dbcmd.ExecuteReader();
+
+                dt.Load(r);
+
+                foreach (DataRow baris in dt.Rows)
+                {
+
+                    using (HttpClient client = new HttpClient())
+                    {
+                        client.BaseAddress = new Uri("http://35.190.172.58:11960/api/absen/insert");
+                        client.DefaultRequestHeaders.Accept.Clear();
+                        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                        var credentials = Convert.ToBase64String(Encoding.ASCII.GetBytes(
+                            string.Format("{0}:{1}", usernameUrl, passwordUrl)));
+                        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", credentials);
+
+                        DateTime dateValuess = Convert.ToDateTime(baris["absen_tanggal"]);
+                        string tanggalabsen = dateValuess.ToString("yyyy-MM-dd");
+
+                        var yourPostedObject = new object();
+                        var values = new Dictionary<string, string>
+                        {
+                             { "nomorMesin", id_sekolah() },
+                             { "nomorKartu", baris["siswa_nomor_kartu"].ToString() },
+                             { "waktuPresensi", tanggalabsen+" "+baris["absen_masuk"].ToString() }
+
+                        };
+
+                        string postData = JsonConvert.SerializeObject(values.ToString());
+
+                        var content = new FormUrlEncodedContent(values);
+                        var response = await client.PostAsync("http://35.190.172.58:11960/api/absen/insert", content);
+
+                        var responseString = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + " Upload data siswa to server : " + baris["absen_id"].ToString());
+                        Console.WriteLine("");
+
+                        //Console.WriteLine(id_sekolah()+"/"+ baris["siswa_nomor_kartu"].ToString()+"/"+ tanggalabsen + " " + baris["absen_masuk"].ToString());
+
+                        Console.WriteLine(postData);
+
+                        Dictionary<string, Object> Items = JsonConvert.DeserializeObject<Dictionary<string, Object>>(responseString);
+                        foreach (KeyValuePair<string, Object> itm in Items)
+                        {
+                            //Console.WriteLine(tanggalabsen + " " + baris["absen_masuk"].ToString());
+                            if (itm.Key == "sukses")
+                            {
+
                                 if (itm.Value.ToString() == "1")
                                 {
                                     Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + " Upload data siswa to server : " + baris["absen_id"].ToString() + " sukses");
@@ -177,22 +260,28 @@ namespace HostComSip
                     }
                 }
 
+                r.Close();
                 conn.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Absen Masuk " + ex.Message);
             }
 
+
+            ubsenMasukBool = false;
+
+
         }
+
         static async void UploadAbsensiKeluar()
         {
+            ubsenKeluarBool = true;
             try
 
             {
                 string usernameUrl = "pro6";
                 string passwordUrl = "pro6Ci-adminLte";
-
 
                 string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";SslMode=" + ssl + ";";
                 MySqlConnection conn = new MySqlConnection(connStr);
@@ -200,7 +289,7 @@ namespace HostComSip
                 int i = 1;
                 MySqlCommand dbcmd = conn.CreateCommand();
                 string sqlselect = "SELECT siswa.siswa_nama, siswa.siswa_nomor_kartu, absen.absen_id, absen.absen_tanggal, absen.absen_masuk, absen.absen_keluar, absen.absen_tanggal";
-                string sqldata = "FROM absen LEFT JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu where upload_masuk='1' and upload_keluar='0';";
+                string sqldata = "FROM absen LEFT JOIN siswa ON siswa.siswa_nomor_kartu = absen.absen_nomor_kartu where upload_masuk='1' and upload_keluar='0' and absen_keluar IS NOT NULL ;";
                 dbcmd.CommandText = sqlselect + " " + sqldata;
 
                 var dt = new DataTable("absen");
@@ -210,26 +299,15 @@ namespace HostComSip
                 dt.Load(r);
 
 
-                /*AbsensiDataContext dc = new HostComSip.AbsensiDataContext(Koneksi());
-                dc.CommandTimeout = 0;
-
-                var absen = from abs in dc.absens
-                            where abs.absen_status == "PENDING"
-                            select abs;*/
-
-
                 foreach (DataRow baris in dt.Rows)
                 {
-                    //string Tanggal = item.absen_tanggal.Value.ToString("yyyy-MM-dd");
-                    //string waktu = baris["absen_masuk"].Value.Hours + ":" + item.absen_masuk.Value.Minutes + ":" + item.absen_masuk.Value.Seconds;
 
                     using (HttpClient client = new HttpClient())
                     {
-
-                    
-                        client.BaseAddress = new Uri(ReadURL());
+                   
+                        client.BaseAddress = new Uri("http://35.190.172.58:11960/api/absen/insert");
                         client.DefaultRequestHeaders.Accept.Clear();
-                        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("multipart/form-data"));
+                        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                         var credentials = Convert.ToBase64String(Encoding.ASCII.GetBytes(
                             string.Format("{0}:{1}", usernameUrl, passwordUrl)));
                         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", credentials);
@@ -245,11 +323,16 @@ namespace HostComSip
                              { "waktuPresensi", tanggalabsen+" "+baris["absen_keluar"].ToString() }
                         };
 
-                        var content = new FormUrlEncodedContent(values);
-                        var response = await client.PostAsync(ReadURL(), content);
+                        string json = JsonConvert.SerializeObject(values, Formatting.Indented);
+
+                        //Console.WriteLine(json);
+
+                        string postData = JsonConvert.SerializeObject(values.ToString());
+
+                        var content = new StringContent(json, Encoding.UTF8, "application/json");
+                        var response = client.PostAsync("http://35.190.172.58:11960/api/absen/insert", content).Result;                  
 
                         var responseString = await response.Content.ReadAsStringAsync();
-
 
                         Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + " Upload data siswa to server : " + baris["absen_id"].ToString());
                         Console.WriteLine("");
@@ -262,7 +345,7 @@ namespace HostComSip
                                 if (itm.Value.ToString() == "1")
                                 {
                                     Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + " Upload data siswa to server : " + baris["absen_id"].ToString() + " sukses");
-                                    Console.WriteLine("");
+                                    Console.WriteLine("Keluar");
 
                                     Update_status_absen_keluar(baris["absen_id"].ToString());
                                 }
@@ -273,19 +356,17 @@ namespace HostComSip
                                 }
                             }
                         }
-
-
-
                     }
                 
                 }
-
+                r.Close();
                 conn.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Absen Keluar " + ex.Message);
             }
+            ubsenKeluarBool = false;
 
         }
         static string id_sekolah()
@@ -328,6 +409,9 @@ namespace HostComSip
             {
                 id = "0";
             }
+            reader.Close();
+            conn.Close();
+
 
             return id;
         }
@@ -335,8 +419,6 @@ namespace HostComSip
         { 
 
             string id = string.Empty;
-
-            MySqlDataReader reader = null;
 
             string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";SslMode=" + ssl + ";";
             MySqlConnection conn = new MySqlConnection(connStr);
@@ -347,11 +429,9 @@ namespace HostComSip
             dbcmd_update.CommandText = sqlup;
             try
             {
-                MySqlDataReader MyReader2 = null;
-
                 //conn.Close();
                 conn.Open();
-                MyReader2 = dbcmd_update.ExecuteReader();
+                dbcmd_update.ExecuteReader();
                 conn.Close();
             }
             catch (Exception ex)
@@ -365,8 +445,6 @@ namespace HostComSip
      
             string id = string.Empty;
 
-            MySqlDataReader reader = null;
-
             string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";SslMode=" + ssl + ";";
             MySqlConnection conn = new MySqlConnection(connStr);
 
@@ -376,11 +454,8 @@ namespace HostComSip
             dbcmd_update.CommandText = sqlup;
             try
             {
-                MySqlDataReader MyReader2 = null;
-
-                //conn.Close();
                 conn.Open();
-                MyReader2 = dbcmd_update.ExecuteReader();
+                dbcmd_update.ExecuteReader();
                 conn.Close();
             }
             catch (Exception ex)

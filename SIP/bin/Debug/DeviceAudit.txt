@@ -1,7 +1,7 @@
 Device
  DeviceName: \\?\HID#VID_FFFF&PID_0035&MI_00#8&3402a834&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}
  DeviceType: KEYBOARD
- DeviceHandle: 4A12017F
+ DeviceHandle: E7E0431
  Name: HID Keyboard Device
 
 DeviceInfo
@@ -25,9 +25,9 @@ HidInfo
 
 =========================================================================================================
 Device
- DeviceName: \\?\HID#VID_046D&PID_C52F&MI_01&Col03#8&1a3eb43d&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}
+ DeviceName: \\?\HID#VID_046D&PID_C52F&MI_01&Col03#8&1b3c3aec&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}
  DeviceType: HID
- DeviceHandle: 1004E
+ DeviceHandle: 20043
  Name: HID-compliant vendor-defined device
 
 DeviceInfo
@@ -51,9 +51,9 @@ HidInfo
 
 =========================================================================================================
 Device
- DeviceName: \\?\HID#VID_046D&PID_C52F&MI_01&Col02#8&1a3eb43d&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}
+ DeviceName: \\?\HID#VID_046D&PID_C52F&MI_01&Col02#8&1b3c3aec&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}
  DeviceType: HID
- DeviceHandle: 1004C
+ DeviceHandle: 20041
  Name: HID-compliant vendor-defined device
 
 DeviceInfo
@@ -77,9 +77,9 @@ HidInfo
 
 =========================================================================================================
 Device
- DeviceName: \\?\HID#VID_046D&PID_C52F&MI_01&Col01#8&1a3eb43d&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
+ DeviceName: \\?\HID#VID_046D&PID_C52F&MI_01&Col01#8&1b3c3aec&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
  DeviceType: HID
- DeviceHandle: 1004A
+ DeviceHandle: 2003F
  Name: HID-compliant consumer control device
 
 DeviceInfo
@@ -103,9 +103,9 @@ HidInfo
 
 =========================================================================================================
 Device
- DeviceName: \\?\HID#VID_1C4F&PID_0002&MI_01&Col01#8&607e8da&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
+ DeviceName: \\?\HID#VID_1C4F&PID_0002&MI_01&Col01#8&8907b3b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
  DeviceType: HID
- DeviceHandle: 10048
+ DeviceHandle: 2003D
  Name: HID-compliant consumer control device
 
 DeviceInfo
@@ -129,9 +129,9 @@ HidInfo
 
 =========================================================================================================
 Device
- DeviceName: \\?\HID#VID_1C4F&PID_0002&MI_00#8&19380518&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}
+ DeviceName: \\?\HID#VID_1C4F&PID_0002&MI_00#8&30fb2904&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}
  DeviceType: KEYBOARD
- DeviceHandle: 10046
+ DeviceHandle: 1003B
  Name: HID Keyboard Device
 
 DeviceInfo

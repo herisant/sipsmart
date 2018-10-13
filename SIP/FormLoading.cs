@@ -14,6 +14,7 @@ using MySql.Data.MySqlClient;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Diagnostics;
 
 namespace SIP
 {
@@ -22,6 +23,7 @@ namespace SIP
     {
         protected string pathDB = System.IO.Path.GetFullPath(System.IO.Path.GetDirectoryName(Application.ExecutablePath)) + @"\myconfig.ini";
         protected string _koneksi = "Server={0};Database={1};User Id={2};Password={3};";
+        protected string pathHost = System.IO.Path.GetFullPath(System.IO.Path.GetDirectoryName(Application.ExecutablePath)) + @"\HostComSip.exe";
         protected FirewallSip _security = new FirewallSip();
 
         string host = "localhost";
@@ -57,6 +59,8 @@ namespace SIP
 
             conn.Close();
 
+            //System.Diagnostics.Process.Start(System.IO.Path.GetFullPath(System.IO.Path.GetDirectoryName(Application.ExecutablePath)) + @"\HostComSip.exe");
+
             if (count==0)
             {
                 btnConnect_Click();
@@ -67,7 +71,35 @@ namespace SIP
                 updateMesin();
                 //btnConnect_Click();
             }
+
+
+            //tsSIP_Click();
         }
+
+        /*private void tsSIP_Click()
+        {
+            if (IsProcessOpen("HostComSip") == false)
+            {
+                Process.Start(pathHost);
+            }
+            else
+            {
+                MessageBox.Show("PROGRAM SUDAH RUNNING", "INFO SIP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public bool IsProcessOpen(string Name)
+        {
+            string name = Name;
+            foreach (Process clsProcess in Process.GetProcesses())
+            {
+                if (clsProcess.ProcessName.ToLower().Contains(name.ToLower()))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }*/
 
         protected void progress_Bar()
         {
@@ -296,6 +328,11 @@ namespace SIP
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private void FormLoading_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
